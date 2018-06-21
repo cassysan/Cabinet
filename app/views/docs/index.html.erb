@@ -7,6 +7,7 @@
         <h3><%= doc.title %></h3>
         <p><%= time_ago_in_words(doc.created_at) %></p>
         <p><%= truncate("#{doc.content}", length: 30) %></p>
+        <p><%= link_to "Delete Document", doc_path(doc.id), method: :delete %></p>
         <% end %>
       <% end %>
       </div>
