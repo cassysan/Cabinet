@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="small-column">
+      <% @docs.each do |doc| %>
+      <div class="card col-xs-3">
+        <%= link_to edit_doc_path(doc) do %>
+        <h3><%= doc.title %></h3>
+        <p><%= time_ago_in_words(doc.created_at) %></p>
+        <p><%= truncate("#{doc.content}", length: 30) %></p>
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+    <div class="large-column">
+    </div>
+  </div>
+</div>
+
+

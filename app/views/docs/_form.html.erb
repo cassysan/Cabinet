@@ -1,0 +1,5 @@
+<%= simple_form_for @doc do |f| %>
+  <%= f.input :title, placeholder: "Title your note" %>
+  <%= f.input :content, placeholder: "put your thoughts here" %>
+  <%= f.button :submit, "Create Document" %>
+<% end %>
